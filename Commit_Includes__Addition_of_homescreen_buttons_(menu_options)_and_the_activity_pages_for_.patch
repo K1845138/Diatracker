@@ -1,0 +1,806 @@
+Index: Diatrack/.idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Diatrack/.idea/misc.xml b/Diatrack/.idea/misc.xml
+--- a/Diatrack/.idea/misc.xml	(revision 6f92f2f42b000eeb7f6b8b46e351ae65f5367478)
++++ b/Diatrack/.idea/misc.xml	(revision e3f697891385561de24b37d800dd3a42c1f30460)
+@@ -8,7 +8,7 @@
+         <entry key="..\:/Users/User/AndroidStudioProjects/Diatrack/app/src/main/res/layout-w1240dp/layout_register.xml" value="0.28828125" />
+         <entry key="..\:/Users/User/AndroidStudioProjects/Diatrack/app/src/main/res/layout-w936dp/layout_register.xml" value="0.26328125" />
+         <entry key="..\:/Users/User/AndroidStudioProjects/Diatrack/app/src/main/res/layout/activity_main.xml" value="0.20930232558139536" />
+-        <entry key="..\:/Users/User/AndroidStudioProjects/Diatrack/app/src/main/res/layout/homescreen_layout.xml" value="0.35648148148148145" />
++        <entry key="..\:/Users/User/AndroidStudioProjects/Diatrack/app/src/main/res/layout/homescreen_layout.xml" value="0.1" />
+         <entry key="..\:/Users/User/AndroidStudioProjects/Diatrack/app/src/main/res/layout/layout_register.xml" value="0.35104166666666664" />
+         <entry key="..\:/Users/User/AndroidStudioProjects/Diatrack/app/src/main/res/layout/login_layout.xml" value="0.18802083333333333" />
+         <entry key="..\:/Users/User/AndroidStudioProjects/Diatrack/app/src/main/res/layout/register_main.xml" value="0.17307692307692307" />
+Index: Diatrack/.idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Diatrack/.idea/vcs.xml b/Diatrack/.idea/vcs.xml
+new file mode 100644
+--- /dev/null	(revision e3f697891385561de24b37d800dd3a42c1f30460)
++++ b/Diatrack/.idea/vcs.xml	(revision e3f697891385561de24b37d800dd3a42c1f30460)
+@@ -0,0 +1,7 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="" vcs="Git" />
++    <mapping directory="$USER_HOME$/CI6330-TeamApp22" vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+Index: Diatrack/app/src/main/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Diatrack/app/src/main/AndroidManifest.xml b/Diatrack/app/src/main/AndroidManifest.xml
+--- a/Diatrack/app/src/main/AndroidManifest.xml	(revision 6f92f2f42b000eeb7f6b8b46e351ae65f5367478)
++++ b/Diatrack/app/src/main/AndroidManifest.xml	(revision e3f697891385561de24b37d800dd3a42c1f30460)
+@@ -10,6 +10,18 @@
+         android:supportsRtl="true"
+         android:theme="@style/Theme.Diatrack">
+         <activity
++            android:name=".Search"
++            android:exported="false" />
++        <activity
++            android:name=".Exercise"
++            android:exported="false" />
++        <activity
++            android:name=".Food"
++            android:exported="false" />
++        <activity
++            android:name=".Insulin"
++            android:exported="false" />
++        <activity
+             android:name=".Homescreen"
+             android:exported="false" />
+         <activity
+Index: Diatrack/app/src/main/java/com/example/diatrack/Exercise.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Diatrack/app/src/main/java/com/example/diatrack/Exercise.java b/Diatrack/app/src/main/java/com/example/diatrack/Exercise.java
+new file mode 100644
+--- /dev/null	(revision e3f697891385561de24b37d800dd3a42c1f30460)
++++ b/Diatrack/app/src/main/java/com/example/diatrack/Exercise.java	(revision e3f697891385561de24b37d800dd3a42c1f30460)
+@@ -0,0 +1,14 @@
++package com.example.diatrack;
++
++import androidx.appcompat.app.AppCompatActivity;
++
++import android.os.Bundle;
++
++public class Exercise extends AppCompatActivity {
++
++    @Override
++    protected void onCreate(Bundle savedInstanceState) {
++        super.onCreate(savedInstanceState);
++        setContentView(R.layout.exercise_layout);
++    }
++}
+\ No newline at end of file
+Index: Diatrack/app/src/main/java/com/example/diatrack/Food.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Diatrack/app/src/main/java/com/example/diatrack/Food.java b/Diatrack/app/src/main/java/com/example/diatrack/Food.java
+new file mode 100644
+--- /dev/null	(revision e3f697891385561de24b37d800dd3a42c1f30460)
++++ b/Diatrack/app/src/main/java/com/example/diatrack/Food.java	(revision e3f697891385561de24b37d800dd3a42c1f30460)
+@@ -0,0 +1,14 @@
++package com.example.diatrack;
++
++import androidx.appcompat.app.AppCompatActivity;
++
++import android.os.Bundle;
++
++public class Food extends AppCompatActivity {
++
++    @Override
++    protected void onCreate(Bundle savedInstanceState) {
++        super.onCreate(savedInstanceState);
++        setContentView(R.layout.food_layout);
++    }
++}
+\ No newline at end of file
+Index: Diatrack/app/src/main/java/com/example/diatrack/Homescreen.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Diatrack/app/src/main/java/com/example/diatrack/Homescreen.java b/Diatrack/app/src/main/java/com/example/diatrack/Homescreen.java
+--- a/Diatrack/app/src/main/java/com/example/diatrack/Homescreen.java	(revision 6f92f2f42b000eeb7f6b8b46e351ae65f5367478)
++++ b/Diatrack/app/src/main/java/com/example/diatrack/Homescreen.java	(revision e3f697891385561de24b37d800dd3a42c1f30460)
+@@ -2,13 +2,43 @@
+ 
+ import androidx.appcompat.app.AppCompatActivity;
+ 
++import android.content.Intent;
+ import android.os.Bundle;
++import android.widget.ImageButton;
+ 
+ public class Homescreen extends AppCompatActivity {
++    ImageButton insulinBttn;
++    ImageButton foodBttn;
++    ImageButton exeBttn;
++    ImageButton searchBttn;
+ 
+     @Override
+     protected void onCreate(Bundle savedInstanceState) {
+         super.onCreate(savedInstanceState);
+         setContentView(R.layout.homescreen_layout);
++
++        insulinBttn = findViewById(R.id.insulin_bttn);
++        insulinBttn.setOnClickListener(v -> {
++            Intent intentLoadNewActivity = new Intent(Homescreen.this, Insulin.class);
++            startActivity(intentLoadNewActivity);
++        });
++
++        foodBttn = findViewById(R.id.food_bttn);
++        foodBttn.setOnClickListener(v -> {
++            Intent intentLoadNewActivity = new Intent(Homescreen.this, Food.class);
++            startActivity(intentLoadNewActivity);
++        });
++
++        exeBttn = findViewById(R.id.exe_bttn);
++        exeBttn.setOnClickListener(v -> {
++            Intent intentLoadNewActivity = new Intent(Homescreen.this, Exercise.class);
++            startActivity(intentLoadNewActivity);
++        });
++
++        searchBttn = findViewById(R.id.search_bttn);
++        searchBttn.setOnClickListener(v -> {
++            Intent intentLoadNewActivity = new Intent(Homescreen.this, Search.class);
++            startActivity(intentLoadNewActivity);
++        });
+     }
+ }
+\ No newline at end of file
+Index: Diatrack/app/src/main/java/com/example/diatrack/Insulin.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Diatrack/app/src/main/java/com/example/diatrack/Insulin.java b/Diatrack/app/src/main/java/com/example/diatrack/Insulin.java
+new file mode 100644
+--- /dev/null	(revision e3f697891385561de24b37d800dd3a42c1f30460)
++++ b/Diatrack/app/src/main/java/com/example/diatrack/Insulin.java	(revision e3f697891385561de24b37d800dd3a42c1f30460)
+@@ -0,0 +1,14 @@
++package com.example.diatrack;
++
++import androidx.appcompat.app.AppCompatActivity;
++
++import android.os.Bundle;
++
++public class Insulin extends AppCompatActivity {
++
++    @Override
++    protected void onCreate(Bundle savedInstanceState) {
++        super.onCreate(savedInstanceState);
++        setContentView(R.layout.insulin_layout);
++    }
++}
+\ No newline at end of file
+Index: Diatrack/app/src/main/java/com/example/diatrack/Search.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Diatrack/app/src/main/java/com/example/diatrack/Search.java b/Diatrack/app/src/main/java/com/example/diatrack/Search.java
+new file mode 100644
+--- /dev/null	(revision e3f697891385561de24b37d800dd3a42c1f30460)
++++ b/Diatrack/app/src/main/java/com/example/diatrack/Search.java	(revision e3f697891385561de24b37d800dd3a42c1f30460)
+@@ -0,0 +1,14 @@
++package com.example.diatrack;
++
++import androidx.appcompat.app.AppCompatActivity;
++
++import android.os.Bundle;
++
++public class Search extends AppCompatActivity {
++
++    @Override
++    protected void onCreate(Bundle savedInstanceState) {
++        super.onCreate(savedInstanceState);
++        setContentView(R.layout.search_layout);
++    }
++}
+\ No newline at end of file
+Index: Diatrack/app/src/main/res/layout/activity_main.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Diatrack/app/src/main/res/layout/activity_main.xml b/Diatrack/app/src/main/res/layout/activity_main.xml
+--- a/Diatrack/app/src/main/res/layout/activity_main.xml	(revision 6f92f2f42b000eeb7f6b8b46e351ae65f5367478)
++++ b/Diatrack/app/src/main/res/layout/activity_main.xml	(revision e3f697891385561de24b37d800dd3a42c1f30460)
+@@ -7,7 +7,6 @@
+     tools:context=".MainActivity">
+ 
+     <ImageView
+-        android:id="@+id/imageViewLogo"
+         android:layout_width="270dp"
+         android:layout_height="198dp"
+         android:layout_marginStart="70dp"
+Index: Diatrack/app/src/main/res/layout/exercise_layout.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Diatrack/app/src/main/res/layout/exercise_layout.xml b/Diatrack/app/src/main/res/layout/exercise_layout.xml
+new file mode 100644
+--- /dev/null	(revision e3f697891385561de24b37d800dd3a42c1f30460)
++++ b/Diatrack/app/src/main/res/layout/exercise_layout.xml	(revision e3f697891385561de24b37d800dd3a42c1f30460)
+@@ -0,0 +1,9 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    tools:context=".Exercise">
++
++</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: Diatrack/app/src/main/res/layout/food_layout.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Diatrack/app/src/main/res/layout/food_layout.xml b/Diatrack/app/src/main/res/layout/food_layout.xml
+new file mode 100644
+--- /dev/null	(revision e3f697891385561de24b37d800dd3a42c1f30460)
++++ b/Diatrack/app/src/main/res/layout/food_layout.xml	(revision e3f697891385561de24b37d800dd3a42c1f30460)
+@@ -0,0 +1,9 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    tools:context=".Food">
++
++</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: Diatrack/app/src/main/res/layout/homescreen_layout.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Diatrack/app/src/main/res/layout/homescreen_layout.xml b/Diatrack/app/src/main/res/layout/homescreen_layout.xml
+--- a/Diatrack/app/src/main/res/layout/homescreen_layout.xml	(revision 6f92f2f42b000eeb7f6b8b46e351ae65f5367478)
++++ b/Diatrack/app/src/main/res/layout/homescreen_layout.xml	(revision e3f697891385561de24b37d800dd3a42c1f30460)
+@@ -7,16 +7,68 @@
+     tools:context=".Homescreen">
+ 
+     <ImageView
+-        android:id="@+id/imageView"
+         android:layout_width="423dp"
+         android:layout_height="98dp"
+         android:layout_marginStart="1dp"
+         android:layout_marginLeft="1dp"
+         android:contentDescription="@string/menubar_label"
++        app:layout_constraintBottom_toTopOf="@+id/insulin_bttn"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintHorizontal_bias="0.0"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="parent"
+         app:srcCompat="@drawable/menubar"
+         tools:ignore="ImageContrastCheck" />
++
++    <ImageButton
++        android:id="@+id/insulin_bttn"
++        android:layout_width="412dp"
++        android:layout_height="125dp"
++        android:background="@color/blue"
++        android:contentDescription="@string/ins_label"
++        android:scaleType="centerCrop"
++        app:layout_constraintBottom_toTopOf="@+id/food_bttn"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHorizontal_bias="0.573"
++        app:layout_constraintStart_toStartOf="parent"
++        app:srcCompat="@drawable/menu_insulin" />
++
++    <ImageButton
++        android:id="@+id/food_bttn"
++        android:layout_width="413dp"
++        android:layout_height="130dp"
++        android:background="@color/blue"
++        android:contentDescription="@string/food_label"
++        android:scaleType="centerCrop"
++        app:layout_constraintBottom_toTopOf="@+id/exe_bttn"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHorizontal_bias="0.573"
++        app:layout_constraintStart_toStartOf="parent"
++        app:srcCompat="@drawable/menu_food" />
++
++    <ImageButton
++        android:id="@+id/exe_bttn"
++        android:layout_width="418dp"
++        android:layout_height="139dp"
++        android:background="@color/blue"
++        android:contentDescription="@string/exe_label"
++        android:scaleType="centerCrop"
++        app:layout_constraintBottom_toTopOf="@+id/search_bttn"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHorizontal_bias="0.537"
++        app:layout_constraintStart_toStartOf="parent"
++        app:srcCompat="@drawable/menu_exe" />
++
++    <ImageButton
++        android:id="@+id/search_bttn"
++        android:layout_width="418dp"
++        android:layout_height="139dp"
++        android:background="@color/blue"
++        android:contentDescription="@string/search_label"
++        android:scaleType="centerCrop"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:srcCompat="@drawable/menu_search" />
++
+ </androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: Diatrack/app/src/main/res/layout/insulin_layout.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Diatrack/app/src/main/res/layout/insulin_layout.xml b/Diatrack/app/src/main/res/layout/insulin_layout.xml
+new file mode 100644
+--- /dev/null	(revision e3f697891385561de24b37d800dd3a42c1f30460)
++++ b/Diatrack/app/src/main/res/layout/insulin_layout.xml	(revision e3f697891385561de24b37d800dd3a42c1f30460)
+@@ -0,0 +1,9 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    tools:context=".Insulin">
++
++</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: Diatrack/app/src/main/res/layout/login_layout.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Diatrack/app/src/main/res/layout/login_layout.xml b/Diatrack/app/src/main/res/layout/login_layout.xml
+--- a/Diatrack/app/src/main/res/layout/login_layout.xml	(revision 6f92f2f42b000eeb7f6b8b46e351ae65f5367478)
++++ b/Diatrack/app/src/main/res/layout/login_layout.xml	(revision e3f697891385561de24b37d800dd3a42c1f30460)
+@@ -24,7 +24,6 @@
+         tools:ignore="DuplicateSpeakableTextCheck" />
+ 
+     <ImageView
+-        android:id="@+id/imageViewLogo2"
+         android:layout_width="270dp"
+         android:layout_height="198dp"
+         android:layout_marginTop="150dp"
+Index: Diatrack/app/src/main/res/layout/register_main.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Diatrack/app/src/main/res/layout/register_main.xml b/Diatrack/app/src/main/res/layout/register_main.xml
+--- a/Diatrack/app/src/main/res/layout/register_main.xml	(revision 6f92f2f42b000eeb7f6b8b46e351ae65f5367478)
++++ b/Diatrack/app/src/main/res/layout/register_main.xml	(revision e3f697891385561de24b37d800dd3a42c1f30460)
+@@ -7,7 +7,6 @@
+     tools:context=".Register">
+ 
+     <ImageView
+-        android:id="@+id/imageViewLogo"
+         android:layout_width="270dp"
+         android:layout_height="198dp"
+         android:layout_marginTop="150dp"
+Index: Diatrack/app/src/main/res/layout/search_layout.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Diatrack/app/src/main/res/layout/search_layout.xml b/Diatrack/app/src/main/res/layout/search_layout.xml
+new file mode 100644
+--- /dev/null	(revision e3f697891385561de24b37d800dd3a42c1f30460)
++++ b/Diatrack/app/src/main/res/layout/search_layout.xml	(revision e3f697891385561de24b37d800dd3a42c1f30460)
+@@ -0,0 +1,9 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    tools:context=".Search">
++
++</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: Diatrack/app/src/main/res/navigation/nav_graph.xml
+===================================================================
+diff --git a/Diatrack/app/src/main/res/navigation/nav_graph.xml b/Diatrack/app/src/main/res/navigation/nav_graph.xml
+deleted file mode 100644
+--- a/Diatrack/app/src/main/res/navigation/nav_graph.xml	(revision 6f92f2f42b000eeb7f6b8b46e351ae65f5367478)
++++ /dev/null	(revision 6f92f2f42b000eeb7f6b8b46e351ae65f5367478)
+@@ -1,28 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+-    xmlns:app="http://schemas.android.com/apk/res-auto"
+-    xmlns:tools="http://schemas.android.com/tools"
+-    android:id="@+id/nav_graph"
+-    app:startDestination="@id/FirstFragment">
+-
+-    <fragment
+-        android:id="@+id/FirstFragment"
+-        android:name="com.example.diatrack.FirstFragment"
+-        android:label="@string/first_fragment_label"
+-        tools:layout="@layout/fragment_first">
+-
+-        <action
+-            android:id="@+id/action_FirstFragment_to_SecondFragment"
+-            app:destination="@id/SecondFragment" />
+-    </fragment>
+-    <fragment
+-        android:id="@+id/SecondFragment"
+-        android:name="com.example.diatrack.SecondFragment"
+-        android:label="@string/second_fragment_label"
+-        tools:layout="@layout/fragment_second">
+-
+-        <action
+-            android:id="@+id/action_SecondFragment_to_FirstFragment"
+-            app:destination="@id/FirstFragment" />
+-    </fragment>
+-</navigation>
+\ No newline at end of file
+Index: Diatrack/app/src/main/res/values-land/dimens.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Diatrack/app/src/main/res/values-land/dimens.xml b/Diatrack/app/src/main/res/values-land/dimens.xml
+--- a/Diatrack/app/src/main/res/values-land/dimens.xml	(revision 6f92f2f42b000eeb7f6b8b46e351ae65f5367478)
++++ b/Diatrack/app/src/main/res/values-land/dimens.xml	(revision e3f697891385561de24b37d800dd3a42c1f30460)
+@@ -1,3 +1,1 @@
+-<resources>
+-    <dimen name="fab_margin">48dp</dimen>
+-</resources>
+\ No newline at end of file
++<resources></resources>
+\ No newline at end of file
+Index: Diatrack/app/src/main/res/values-w1240dp/dimens.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Diatrack/app/src/main/res/values-w1240dp/dimens.xml b/Diatrack/app/src/main/res/values-w1240dp/dimens.xml
+--- a/Diatrack/app/src/main/res/values-w1240dp/dimens.xml	(revision 6f92f2f42b000eeb7f6b8b46e351ae65f5367478)
++++ b/Diatrack/app/src/main/res/values-w1240dp/dimens.xml	(revision e3f697891385561de24b37d800dd3a42c1f30460)
+@@ -1,3 +1,1 @@
+-<resources>
+-    <dimen name="fab_margin">200dp</dimen>
+-</resources>
+\ No newline at end of file
++<resources></resources>
+\ No newline at end of file
+Index: Diatrack/app/src/main/res/values-w600dp/dimens.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Diatrack/app/src/main/res/values-w600dp/dimens.xml b/Diatrack/app/src/main/res/values-w600dp/dimens.xml
+--- a/Diatrack/app/src/main/res/values-w600dp/dimens.xml	(revision 6f92f2f42b000eeb7f6b8b46e351ae65f5367478)
++++ b/Diatrack/app/src/main/res/values-w600dp/dimens.xml	(revision e3f697891385561de24b37d800dd3a42c1f30460)
+@@ -1,3 +1,1 @@
+-<resources>
+-    <dimen name="fab_margin">48dp</dimen>
+-</resources>
+\ No newline at end of file
++<resources></resources>
+\ No newline at end of file
+Index: Diatrack/app/src/main/res/values/dimens.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Diatrack/app/src/main/res/values/dimens.xml b/Diatrack/app/src/main/res/values/dimens.xml
+--- a/Diatrack/app/src/main/res/values/dimens.xml	(revision 6f92f2f42b000eeb7f6b8b46e351ae65f5367478)
++++ b/Diatrack/app/src/main/res/values/dimens.xml	(revision e3f697891385561de24b37d800dd3a42c1f30460)
+@@ -1,3 +1,1 @@
+-<resources>
+-    <dimen name="fab_margin">16dp</dimen>
+-</resources>
+\ No newline at end of file
++<resources></resources>
+\ No newline at end of file
+Index: Diatrack/app/src/main/res/values/strings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Diatrack/app/src/main/res/values/strings.xml b/Diatrack/app/src/main/res/values/strings.xml
+--- a/Diatrack/app/src/main/res/values/strings.xml	(revision 6f92f2f42b000eeb7f6b8b46e351ae65f5367478)
++++ b/Diatrack/app/src/main/res/values/strings.xml	(revision e3f697891385561de24b37d800dd3a42c1f30460)
+@@ -1,26 +1,14 @@
+ <resources>
+-    <string name="app_name">Diatrack</string>
++    <string name="app_name">DIATRACK</string>
+     <string name="login">Login</string>
+     <string name="register">Register</string>
+-    <string name="submit">Submit</string>
+-    <string name="cancel">Cancel</string>
+-    <string name="delete">Delete</string>
+     <string name="title_activity_register">Register</string>
+-    <string name="prompt_email">Email</string>
+-    <string name="prompt_password">Password</string>
+-    <string name="action_sign_in">Sign in or register</string>
+-    <string name="action_sign_in_short">Sign in</string>
+-    <string name="welcome">"Welcome !"</string>
+-    <string name="invalid_username">Not a valid username</string>
+-    <string name="invalid_password">Password must be >5 characters</string>
+-    <string name="login_failed">"Login failed"</string>
+     <!-- Strings used for fragments for navigation -->
+     <string name="menubar_label">Main Menu</string>
+-    <string name="second_fragment_label">Second Fragment</string>
+-    <string name="next">Next</string>
+-    <string name="previous">Previous</string>
+ 
+-    <string name="hello_first_fragment">Hello first fragment</string>
+-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+-    <string name="title_activity_login">Login</string>
++    <string name="ins_label">Insulin Log</string>
++    <string name="food_label">Food Diary</string>
++    <string name="exe_label">Exercise Logbook</string>
++    <string name="search_label">Search Records</string>
++
+ </resources>
+\ No newline at end of file
+Index: Diatrack/app/src/main/res/values/themes.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Diatrack/app/src/main/res/values/themes.xml b/Diatrack/app/src/main/res/values/themes.xml
+--- a/Diatrack/app/src/main/res/values/themes.xml	(revision 6f92f2f42b000eeb7f6b8b46e351ae65f5367478)
++++ b/Diatrack/app/src/main/res/values/themes.xml	(revision e3f697891385561de24b37d800dd3a42c1f30460)
+@@ -21,7 +21,4 @@
+         <item name="windowNoTitle">true</item>
+     </style>
+ 
+-    <style name="Theme.Diatrack.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+-
+-    <style name="Theme.Diatrack.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+ </resources>
+\ No newline at end of file
+diff --git a/Diatrack/app/src/main/res/drawable/addbttn_txt.png b/Diatrack/app/src/main/res/drawable/addbttn_txt.png
+deleted file mode 100644
+index 2cb8f2700beb3eb41d3ec795288d24b702219293..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git a/Diatrack/app/src/main/res/drawable/blue_input.png b/Diatrack/app/src/main/res/drawable/blue_input.png
+deleted file mode 100644
+index 61a9d70f26f1a5171e8f4c97b374a4c720975388..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git a/Diatrack/app/src/main/res/drawable/cancelbttn_txt.png b/Diatrack/app/src/main/res/drawable/cancelbttn_txt.png
+deleted file mode 100644
+index 643b184ae7caca1fe3bff83584ea1b23f40e52ab..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git a/Diatrack/app/src/main/res/drawable/delbttn_txt.png b/Diatrack/app/src/main/res/drawable/delbttn_txt.png
+deleted file mode 100644
+index a00f40094ad9f2935a76ec7edb5dec5d1bb2fc69..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git a/Diatrack/app/src/main/res/drawable/editbttn_txt.png b/Diatrack/app/src/main/res/drawable/editbttn_txt.png
+deleted file mode 100644
+index b2926e4bac15cae39d5bd62925d0269be820956f..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git a/Diatrack/app/src/main/res/drawable/exportbttn_txt.png b/Diatrack/app/src/main/res/drawable/exportbttn_txt.png
+deleted file mode 100644
+index 8fa0907d6bdd11603e47e0d03285f931baf418e4..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git a/Diatrack/app/src/main/res/drawable/lightblue_input.png b/Diatrack/app/src/main/res/drawable/lightblue_input.png
+deleted file mode 100644
+index 30082fc0ba7a307a1099ddbf11be6ec1d338649a..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git a/Diatrack/app/src/main/res/drawable/menu_exe.png b/Diatrack/app/src/main/res/drawable/menu_exe.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..3c98435e1d2adc79a0688113bca06e199c9377f1
+GIT binary patch
+literal 2656
+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
+PIijM7pNI25Nk9KzfP_2*
+
+diff --git a/Diatrack/app/src/main/res/drawable/menu_food.png b/Diatrack/app/src/main/res/drawable/menu_food.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..6b8f9457d6f284c407f51e2b630a11f967d11d6a
+GIT binary patch
+literal 2201
+zc%1E)|5MU;9LF(|ImOGecA`tWEbZH=L26`*<`>kaS*@BA#i`^R2c}#q2l7!@rlyj!
+zX88ryYV8NVFf~a;ft@7zB|lrc_{?u<m{1WBn&KDaGrHYvvp=ERFYkNb^ZB~x53kp~
+z9``DZizV9II@=-;2>YnWuoDP`702=~v_V;3MaJ(J5D1&(sIZXF^Q?4#hLr6H|Ma2(
+z&--ZBH7Qi>;3~W5Wu5gj;<t*TT}5?Ou<To({%?rAm_6!M+uEjq%964s<Kr5^%41JH
+z$K1yS5lAOl@CKyd!i1x+iBe&OMkD2VZ&$$Z6#_{?I{@)h&iuYhR%i!;fy%O!Vvut3
+zC!NBdbrxTK%rxqX@`>w17;3CrbQu;OVQ`cRE#+7D2b(B`RMtB`*d!O|{)rpq3IC7#
+zK;qsUP{GS%Zj+`zrbCe{6C0%66OWD&U~`K5K&N<>P+O;6)o}@A(n=_~-RN$OW}DCs
+zuw4b=2(UxX4#B>THQ|lRmov>Cc`A5ON_yIRTnYBcPL{#(LAPyI6Ym2wJ-^3{eFCuR
+zAuyY^5E9|^oKmm|EBb&fFuV2i5?CRxX*Ldeuto@WNJSZecKF)z@xA2xb*&H}CRqng
+zOBP?Q_%pdgs;9hM><E|l>(eKOm~RC<@#=85mTVW#SinO#E+1H()*0w-OeuyRcyQB3
+z)FI5l6DD^dk-Ozt)%Yz%iBGCqzn{K+ulc;2=tY>k@ivr|yOK2HW=L<qNQc3dXU-aD
+zbrn?EK+Y2l<~!v@8^}NTe`ohg<MV8KC9^4&LBD1?MA%*tmd;j^c6RMGADE2?lnurQ
+zL8lFxi1uh!&+cZZDiExnuVruoYkZXqQ7m!0EZ7aHC?#Z<2P1WRUgB$@#xHPw)Ueyk
+z{6yTQ)i@PsZc*Hwf0fJO_cZ%A;-yd0+G6Qgt^H0Z<JHQeL6Z8|ZgY+7v&+)xea$%>
+z0_ZLd$RO5c$hgX(PO+~t@a*_R%-Oyfj|2MZ{B!`qYtN^V@lQ%&dM4yD(k+pIT>w~$
+zKqgwIHk<ilB%WMkvl`oi!70jFJ0KHhJ&&2IA}hidw1!v{&XcOX-jO~js%m23hFi6R
+zUYX2Gh0}6?)-JlzaS9Z5ORBS!CFr^3WdU!a=5UUj;9q_CbQE!TguFg5wOv3;SZL*e
+zF)4|-X{ZBBAD%H*t}iI0qbePN3-}@uCC3vIGjiwL6_I(8&7!O!XZVz<@ojp;{NVTb
+z&jO)V?Rm=h5MLAT&XT+v^g~tR0^fJ5n6eG#nYfOy>_&0Wi3GQ*uMtTzJ(YDDs+jCD
+zd&uii{uzUSApp<Z0L^U+T^b^^r4)8C2p~xkHONK5^A<Hx@+ni11~5FVc;l;EYO&vo
+z@}B5CrFZ~Phw}ndz+FLr0Ss#4;%i#9U(T^zwIYnzoYp*FuL0n4wrdbK0>z6kRk)c~
+zy4B+klDhVHgT{M)H&dpVm~G~xM}xL1O*^j$34o}c6SDw!ud8}^W5fX_?&H8?gt?<p
+zcd}WNmi`kx%trh2`KXVP8k}W|_2iI$S2l-}P<<1fi`m9eK?^<wg;-RHbl;naJINAZ
+zY2n;j`5aAW5_*JUUSrp?KpgWco96g;_<s>Gx<rd9#*SOIu9Q61i$D!HZ8NvYa_fqg
+zMm<o&>1*YVj=8Z~G^KNJEiCkY)^i;(=z8!yhEO&4d@%#(YOGYA9NGq?)2`Hl#ldxx
+zG+Q;b&gme3tqduLGpX3CPrcT{Niw#12=d#1F6cdGH8)Hu({}YHqDuIS9f9cNAIhy%
+z-gfMJyRQpqDO2pVGASWI+T0&kEM5!4Mfyn}@|aw<^gbg$_=Zn;yLUZ^YU^wEwVWJ?
+NsPNdZmLthUe*q&}HGBX7
+
+diff --git a/Diatrack/app/src/main/res/drawable/menu_insulin.png b/Diatrack/app/src/main/res/drawable/menu_insulin.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..8adde74a5cc2d241c078fd03c43de53186bf0512
+GIT binary patch
+literal 2111
+zc%1E)|5MU;9LGN#j=l^|ZEeGEn5lhTikTT5f-5trrp@hUU;IX<o=IpKXo4VRC0SB3
+zqdbM}rZrEc7M<U}l?1v(mlZ6(guwz0P0>)0Z^OG?H~9y;+wGV4y?=P$<NdtX`<{<`
+zGY>}Yg{^d52><{L7ZDZ>03e!e&sYwzt>Uz&1pu%df(!fl`y9~Z%ZHbT!&hIxV-w^3
+zTF_yLM;W6NyT4!%pk75j4p7F5;LP$}-Q0lNrLGlsA4b&i{Yu}Nb(#Z4NwB<)G7|+u
+z=7XT`k<;M<N?DyO_bLbq1q-MA5p*pc04GD8=!d&}F-%7=d<{*(nM39?wn7R!YF`g<
+zA6x=Kov_;d6nJN-3s{&S%}k3L>;fQ#JbhINH1Ve^AccQ=<Ae2+HjXgLG=P904~hUS
+zCn$E1ZR3Cx>uG5=?1rR#{S#NeNt}%XXg}*%#Qqo%YD$K2<|=KRd_6N^5&JuQjphEu
+z{gg#cs7dHQ`5|6aNZSAL{)_Pl-WE@q!MyRV$EqG97Gr8D=h4g><u|9u6X~)tl+`pn
+zFP^1Nmbd#qwVmhL?!sy-S=X3y*!w28?o@rwRj8Bo%R;L&tPiZZEaYX?ISTg1vQa%w
+zU`k-9$yY%)Dl-helT7`5`$pV%bcCc+s$kWwtB&-N%BbY8B3GRhy`i{p48`L+tsVD@
+z`(tZ-`imv8vkR6H<DK5XDVDn1wRou4P@+9d=V#Q54Kp+kwpq8ZweQAp<R9YB8fUtL
+z8&g6qr8_j!FvgmRwSB)F_nsgTRFrCc>adoC?tclpF^dkKBUs8a5Ib)fhZ?Zz>2Wfq
+z|IkpoTYSHc3eWjm;d#C;x^MTI==kJ@a}}qYmEMoB>1b|hame~XP9a?-*{r^)K^uvP
+zW8!5v(e0G<iU~Fd(hScDQY3uh+Vlp0?=syZyTEW=fnBLP@La6xH7+-7cuOJ-ShVgM
+zlA3XC&|UrHY;jht`ZqagR+F94k#IrJT2(Z>)&kmbtSD0u=jp&&ZS8G)6@j7`w9@L|
+zrH+Wx(QbjVHU!UXc-4B^qQhScsvS~Gv&!Yhc+{9Vk3x6TI#%LDHDf8*M+7J9b1z4B
+zlE-lOeA{*14;dW=jH66z&THqyf%kWWyi)>+JF4EY?KFAfX5*|mV!o-M0woYp=_4ve
+zJwF+f@GP&7Z5wWd7=ua#z+IhNgghQCyngeaC`5I*DbNoKO73-cOH&!0$2JWKl41(!
+zKHM1Ez%5crNK-qiK0c~lK$K0XkDTlQz;V#wT_*5Jht_?5wih`~7+LqNm8VFM3Er`~
+z)eHAUI>Ch6Yr9f<=_m$El;t+QZXxEFrBnFP?FwEIimlxA*hO$#?W~AE-XA_}63iu)
+zC9o}2E{`VF+*BGk3%%RL1ZxfJ$gg`o1rHT=RE@G)`*c5($z1e~nHb?qxVYO9JfE7c
+z=Y&z0jbi87F|?VcE>iPF;}aaqQ<kLYxTRO8^hE7+&Z{r6D2YBL(L*vJpp_pq-CYry
+z?t1_l+rL;P>)7KDy@`?C*&GxzJ7QPk7GFor^@{<SA$ApQZpOq_H<e9^mR3@}<?JEW
+zwkr&ci=7Q#=*IU+UQmOVwqH-|>B_Cd{}bn5&F1r?VovZ?EdfhKlf54y^@b&l=GsZ*
+z3@NWUIx9$ib*VJkkIvjfq`|?mKs#U6Xr7gp)fk9N{WLvNa!D7_1#jfqxhF1;$A2Cx
+z$xd48nyDM;+P$u#PMw|R#@{ZSsZyP2cUw9$YQtankO3rwpK7P9k39NL?24z{WBKdO
+SH`qP~0B%oY7=KsdxxWFYfC@zb
+
+diff --git a/Diatrack/app/src/main/res/drawable/menu_search.png b/Diatrack/app/src/main/res/drawable/menu_search.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..00a62398d4c8dc67254afbbfd996105be4724159
+GIT binary patch
+literal 2572
+zc%1E)|5s9X1IMqqhrZ9+>`B)iv7EVYg~D-59pW~#oDR0!+##FzCFP(qTuhw-7u#~`
+z^60eEoC^JrwU)^Y6`51^WRWFsdvuC?Q4-TT6C}C@=mqXWzw8|Q3!d|w{qi~Yr`LJ?
+z@cz6$x9TJ6fz2CU+5iB+=EQ^XhXB9_^nRDG!+Fmm&NKA@uzoZ#{@qW$_OTcuYC;pY
+zl~2=mpc$LrJhkUOgbTl|SmU>LIwPa{)FVLppU9f8V$Oa%x%5+B5NF_Qg6(zUE+TP}
+zfyIm|c#Z{zd+rR@;)4q>I~jx<NHGhuu67^J27Ctr8+!USgBS37T%hkwMrvUd%`^z$
+zDn-sV@}`Un)jlS|8@*j&mQ29+Ce1YxgbV*j0oWS19nqb!hnM-7!a$avZ@{bBWzOLZ
+zdo79FfZqYzi}J1tpG{{Y;#@iZXtZDSa>|@l44oHyHz3$^{hK82Q%;=gCgCYIXVVq|
+z{oifmr<`EW)ab>YB;qRN?e|B7PdQsCwj}OfdMujmZ@vF5z5BB_vH9s0flp)_Hs~jC
+zU3%`^vecfY;g=)L{qTu$_k{0qB<T^+WX!4zE=FOBd$#%LO5H6LDF5_c6PAif<sSDe
+zG(E2@;fod*Lb5jTUiKw~c!m~@*b2nV(%*1SvgMe0>gvh*66Y0@V5J_tU5hCni$Kin
+zN8mqCE7BJ6eid71!1>m03Ao-?J9NB1v^&=Z^}#FSga#3^UFf_s2S0!$6xiyuJzLD)
+zuP0XdixkILxrQ!y`yE$zokx2hmZ@51Ht<`ys($TfbC<2W)Nw<BLb#wl?|%NW6XL5F
+zYq^uWsr(0YnN%;PTa%dQP^5*<*5pz0u~1Srn``9oJg&xx(tWkqxs#1surE%W&U&u!
+zu7%f`LfxwEO1qx6kDDB8?bHr76feT*b8VCLRO4%sC6Tqz)AA)(Rjtj>rE#o1;(5rx
+zGDcUB7kj467M4LH97}(D!CZ2;kCx<#|7Sv%b@0Y;rQm3BA9bt2!+Mp08^xVp$HZP7
+z0mmD@P*D5iUke}fXoe(qPYA3}Co!d5j|Bmx{o;P=RJQ#6aXrFGkNQ@Bg2q9rk#_s`
+zWHnDT)*i{7<kPs2fe*osx-yO>M$@<z`;PG5_k|+~mt^=%i!87Y6~=}YEJp5<Ag6b`
+zx#spJe*7<`_Ncw?Ku4Eo9vvyV8;(Y!Ff4l<l%_znb=G#0n{GA0qpoTd>H0DCQQgvq
+z+>SaX6q}+UPr<Q)SC(&&xk7KreI{;HChxLH<7GL$p&YfgzD8MWG>2-^Io1dfY0)3P
+zMnOh$4WMTVEtpht^OzPoyCY?!^q5XbF><Us>jzpt&65~2$Bjiwg!mTpVKeh+i+$$Q
+z{q`93%IqylaKe_5W;Z9^_D4c`;ssjvCHBVGiGAze%AW$G9#`vK66{DA;t<+Vp-JtO
+z>Y6a2iDG=MJKC73nAKVNSD`2YWRty5edq#<ydyi%D`nV+UNP0ad2Gg4N&Oj~XqTaq
+z+LT<W#~d;f(&K938&)`!0)>UF>ffVk{Z1k#@OS2bY63L8e37!yib5_eV{S?@mwZVz
+z!Gc?lTRaHoVLiFk;dX(<!X7dceZhNYqS_?oTX!znc8p5|r_SeZL|7_1yjwz!h4lHC
+z2~f0gdR$b>BJH&{c~~3^x6V9tyq5n^@FV_CuF5S$e<PL*yNXl$aP$yHIGt(#Rn+Ye
+zf+lO-y$(5qPjPrh>K}9c`<K;r|93AI)ijGr*3?{3f7yheR|OI6{tiRm=Uh<Hg0S6T
+z4+5nc<$1H?oeE`X9;rmP?n%<jaU9%>$O20S7T$ToVSfo-)@nw3m8FN@M!N7JYhl+g
+z8TL*nu6Xz0!Hm<q!QPzuP85uV({<i~ixWHPu>Y7$+%EWFVO&%+nrkrc;j@^kBQOVP
+z`vFBbbCzOpL^gXy{lp%a)8BGyxdV2Ws(*tz3KYrcQn^U(Z{H^p$X+<4uN7O8s_+2b
+zuZ&bO7x1SyS#HdU$D)J3jSc*%l%}c@Ijiu0wQTIk#pv$Tg&nK2=V}0!k}3lJ%zP%e
+zMdT~gYhx>l)$x;u0`8HWxD(H0_t59GpHuR?2O?G%n!P?w{#B*-?Oh$;Pc&y9{&Dyk
+wdv&KDrLDO~_*d42if0o1xAy;mwrAsK0jAF0eTTPs|MGyu{nYr5_cFfuFO4uMF8}}l
+
+diff --git a/Diatrack/app/src/main/res/drawable/nobttn_txt.png b/Diatrack/app/src/main/res/drawable/nobttn_txt.png
+deleted file mode 100644
+index 162e01d51f8f51472ff49f4f3b0d37e4072331ee..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git a/Diatrack/app/src/main/res/drawable/purple_button.png b/Diatrack/app/src/main/res/drawable/purple_button.png
+deleted file mode 100644
+index 1dc8a6a27ae44eb55f7368dc78517961ad32f977..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git a/Diatrack/app/src/main/res/drawable/send_exportbttn_txt.png b/Diatrack/app/src/main/res/drawable/send_exportbttn_txt.png
+deleted file mode 100644
+index 6c2af2c8650af27388741bd684879c9219e1bd8a..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git a/Diatrack/app/src/main/res/drawable/submitbttn_txt.png b/Diatrack/app/src/main/res/drawable/submitbttn_txt.png
+deleted file mode 100644
+index d2def747688a2c2c8452663728f79cfb956c8572..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git a/Diatrack/app/src/main/res/drawable/yesbttn_text.png b/Diatrack/app/src/main/res/drawable/yesbttn_text.png
+deleted file mode 100644
+index 82a14e52fbff90c59a8c78e7e499fbf1ec0a25d4..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
